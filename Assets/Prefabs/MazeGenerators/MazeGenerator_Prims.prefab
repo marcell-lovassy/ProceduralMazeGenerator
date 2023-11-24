@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1049314305440547095
+--- !u!1 &4347877891722657462
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1488715452437470269}
-  - component: {fileID: 7401144755898250350}
+  - component: {fileID: 9192240976951022138}
+  - component: {fileID: 4737503815856865508}
   m_Layer: 0
-  m_Name: MazeGenerator_Crawler
+  m_Name: MazeGenerator_Prims
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1488715452437470269
+--- !u!4 &9192240976951022138
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049314305440547095}
+  m_GameObject: {fileID: 4347877891722657462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7401144755898250350
+--- !u!114 &4737503815856865508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049314305440547095}
+  m_GameObject: {fileID: 4347877891722657462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aafdd45cc7922a44834aac58d9d6903, type: 3}
+  m_Script: {fileID: 11500000, guid: 41a993ac004b9f64ea96072396d8b2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mazeWidth: 30
-  mazeDepth: 30
+  mazeWidth: 10
+  mazeDepth: 10
   scale: 6
-  crawlers: []
+  primsWorker: []

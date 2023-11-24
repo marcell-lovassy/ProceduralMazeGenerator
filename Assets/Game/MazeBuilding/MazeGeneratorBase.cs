@@ -84,5 +84,66 @@ namespace Game.MazeBuilding
         {
             return (byte)UnityEngine.Random.Range(0, 2);
         }
+
+        public int CountAllEmptyNeighbours(int x, int z)
+        {
+            return CountStreightEmptyNeighbours(x, z) + CountDiagonalEmptyNeighbours(x, z);
+        }
+
+        public int CountStreightEmptyNeighbours(int x, int z)
+        {
+            int count = 0;
+
+            if(x <= 0 || x >= mazeWidth - 1 || z <= 0 || z >= mazeDepth - 1)
+            {
+                return 5;
+            }
+
+            var neighbourCoordinates = new MapLocation[] 
+            {
+                new MapLocation(x + 1, z),
+                new MapLocation(x - 1, z),
+                new MapLocation(x, z + 1),
+                new MapLocation(x, z - 1),
+            };
+
+            foreach (var neighbour in neighbourCoordinates)
+            {
+                if (map[neighbour.x, neighbour.z] == 0)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        public int CountDiagonalEmptyNeighbours(int x, int z)
+        {
+            int count = 0;
+
+            if (x <= 0 || x >= mazeWidth - 1 || z <= 0 || z >= mazeDepth - 1)
+            {
+                return 5;
+            }
+
+            var neighbourCoordinates = new MapLocation[]
+            {
+                new MapLocation(x + 1, z + 1),
+                new MapLocation(x - 1, z + 1),
+                new MapLocation(x - 1, z - 1),
+                new MapLocation(x + 1, z - 1),
+            };
+
+            foreach (var neighbour in neighbourCoordinates)
+            {
+                if (map[neighbour.x, neighbour.z] == 0)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
     }
 }
